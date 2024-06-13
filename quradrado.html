@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<ht, ml lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="circulo.css">
+    <title>Quadrado</title>
+</head>
+<body>
+    <header>
+       <a href="index.html"> <h1>perimetro</h1></a>
+</header>
+
+    <main>
+        <form>
+            
+            <label for="lado">                
+                <input type="number" id="lado" name="lado" placeholder="Digite do lado ">
+            </label>
+
+            
+            <input type="submit" value="Calcular" id="btn">
+        </form>
+
+        <div class="res">
+            <h2 id="res"></h2>
+        </div>
+    </main>
+
+    <script>
+          var botao = document.querySelector("#btn")
+          var resposta = document.querySelector("#res")
+          function calculo(event){
+            event.preventDefault()
+            
+              var lado = document.querySelector("#lado").value 
+              var area =  lado*2
+
+              console.log(typeof(comprimento));
+             
+           
+              resposta.innerHTML = `O valor da área é ${area}`
+        }
+
+        botao.addEventListener("click", calculo)
+
+
+        
+
+
+       /*  alert("O valor da área do circulo é" + pi*(r*r)) */
+
+
+    </script>
+</body>
+</html>

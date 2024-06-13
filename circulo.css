@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "IBM Plex Serif", serif;}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+h2{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 100px;
+}
+
+#btn{
+    width:150px;
+    height: 50px;
+   background-color: aqua;
+}
+input{
+    background-color: rgba(115, 255, 0, 0.281);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+   
+   
+}
+
+#calculo{
+    width:150px;
+    height: 50px;
+    margin: 80px;
+
+
+   
+}
+
+
+header {
+ background: hsla(152, 93%, 48%, 0.718);
+ padding: 20px;
+ margin-bottom: 20px;   
+}
+
+header h1{
+    text-align: center;
+}
+
+
+   
+footer p {
+    text-align: center;
+   
+}

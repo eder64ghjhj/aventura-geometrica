@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="circulo.css">
+    <title>Cuboid</title>
+</head>
+<body>
+    <header>
+       <a href="index.html"> <h1>Cuboid</h1></a>
+    </header>
+
+    <main>
+        <form>
+            <label for="calculo">
+                <input type="number" id="comprimento" name="comprimento" placeholder="Digite do Comprimento ">
+            </label>
+
+            <label for="calculo">
+                <input type="number" id="largura" name="Largura" placeholder="Digite Largura ">
+            </label>
+
+            <label for="calculo">
+                <input type="number" id="altura" name="altura " placeholder="Digite Altura ">
+            </label>
+
+            <input type="submit" value="Calcular" id="btn">
+        </form>
+
+        <div class="res">
+            <h2 id="res"></h2>
+        </div>
+    </main>
+
+    <script>
+          var botao = document.querySelector("#btn")
+          var resposta = document.querySelector("#res")
+          function calculo(event){
+            event.preventDefault()
+            
+              var comprimento = document.querySelector("#comprimento").value
+              var largura = document.querySelector("#largura").value
+              var altura  = document.querySelector("#altura ").value
+           
+              resposta.innerHTML = `Resultado ${comprimento*largura*altura}`
+        }
+
+        botao.addEventListener("click", calculo)
+
+
+        
+
+
+       /*  alert("O valor da área do circulo é" + pi*(r*r)) */
+
+
+    </script>
+</body>
+</html>

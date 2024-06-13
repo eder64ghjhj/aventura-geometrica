@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<ht, ml lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="circulo.css">
+    <title>Trapezoide</title>
+</head>
+<body>
+    <header>
+       <a href="index.html"> <h1>Trapezoide</h1></a>
+</header>
+
+<main>
+    <form id="formTrapezoide">
+        <label for="base1">Base 1:</label>
+        <input type="number" id="base1" name="base1" placeholder="Digite a base 1">
+
+        <label for="base2">Base 2:</label>
+        <input type="number" id="base2" name="base2" placeholder="Digite a base 2">
+
+        <label for="lado1">Lado 1:</label>
+        <input type="number" id="lado1" name="lado1" placeholder="Digite o lado 1">
+
+        <label for="lado2">Lado 2:</label>
+        <input type="number" id="lado2" name="lado2" placeholder="Digite o lado 2">
+
+        <label for="h">Altura:</label>
+        <input type="number" id="h" name="h" placeholder="Digite a altura">
+
+        <button type="submit" id="btn">Calcular</button>
+    </form>
+
+    <div class="res">
+        <h2 id="res"></h2>
+    </div>
+</main>
+
+<script>
+    var form = document.querySelector("#formTrapezoide");
+    var resposta = document.querySelector("#res");
+
+    function calculo(event) {
+        event.preventDefault();
+        
+        var base1 = parseFloat(document.querySelector("#base1").value);
+        var base2 = parseFloat(document.querySelector("#base2").value);
+        var lado1 = parseFloat(document.querySelector("#lado1").value);
+        var lado2 = parseFloat(document.querySelector("#lado2").value);
+        var altura = parseFloat(document.querySelector("#h").value);
+
+        if (isNaN(base1) || isNaN(base2) || isNaN(lado1) || isNaN(lado2) || isNaN(altura)) {
+            resposta.innerHTML = "Por favor, insira valores válidos.";
+            return;
+        }
+
+        var area = ((base1 + base2) / 2) * altura;
+        var perimetro = base1 + base2 + lado1 + lado2;
+
+        resposta.innerHTML = `A área do trapezoide é: ${area.toFixed(2)}<br>O perímetro do trapezoide é: ${perimetro.toFixed(2)}`;
+    }
+
+    form.addEventListener("submit", calculo);
+</script>
+
+        
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<ht, ml lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="circulo.css">
+    <title>Poligono</title>
+</head>
+<body>
+    <header>
+       <a href="index.html"> <h1>Poligono</h1></a>
+</header>
+
+    <main>
+        <form>
+            
+            <label for="perimetro">                
+                <input type="number" id="perimetro" name="perimetro" placeholder="Digite do perímetro ">
+            </label>
+
+            <label for="apotema">
+                <input type="number" id="apotema" name="apotema" placeholder="Digite apótema">
+            </label>
+
+            <input type="submit" value="Calcular" id="btn">
+        </form>
+
+        <div class="res">
+            <h2 id="res"></h2>
+        </div>
+    </main>
+
+    <script>
+          var botao = document.querySelector("#btn")
+          var resposta = document.querySelector("#res")
+          function calculo(event){
+            event.preventDefault()
+            
+              var apotema = document.querySelector("#apotema").value
+              var perimetro = document.querySelector("#perimetro").value
+              var area = 1/2 * perimetro*apotema
+
+              console.log(typeof(comprimento));
+             
+           
+              resposta.innerHTML = `Resultado ${area}`
+        }
+
+        botao.addEventListener("click", calculo)
+
+
+        
+
+
+       /*  alert("O valor da área do circulo é" + pi*(r*r)) */
+
+
+    </script>
+</body>
+</html>

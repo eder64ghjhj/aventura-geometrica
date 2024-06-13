@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<ht, ml lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="circulo.css">
+    <title>Romboedro</title>
+</head>
+<body>
+    <header>
+       <a href="index.html"> <h1>Romboedro</h1></a>
+</header>
+
+    
+        
+        <label for="comprimentoLado">Comprimento do Lado (a):</label>
+        <input type="number" id="comprimentoLado" step="any">
+    
+        <label for="anguloTheta">Ângulo (θ) em graus:</label>
+        <input type="number" id="anguloTheta" step="any">
+    
+        <button onclick="calcularVolume()">Calcular Volume</button>
+    
+        <h2 id="resultado"></h2>
+        
+    
+        <script>
+            // Função para calcular o volume de um romboedro
+            function volumeRomboedro(a, theta) {
+                let thetaRad = theta * (Math.PI / 180); // Converte graus para radianos
+                let cosTheta = Math.cos(thetaRad);
+                let fator = 1 - 3 * Math.pow(cosTheta, 2) + 2 * Math.pow(cosTheta, 3);
+                return Math.pow(a, 3) * Math.sqrt(fator);
+            }
+    
+            // Função para obter os valores dos inputs e calcular o volume
+            function calcularVolume() {
+                let comprimentoLado = parseFloat(document.getElementById('comprimentoLado').value);
+                let anguloTheta = parseFloat(document.getElementById('anguloTheta').value);
+    
+                if (isNaN(comprimentoLado) || isNaN(anguloTheta)) {
+                    document.getElementById('resultado').innerText = "Por favor, insira valores válidos.";
+                    return;
+                }
+    
+                let volume = volumeRomboedro(comprimentoLado, anguloTheta);
+                document.getElementById('resultado').innerText = `O volume do romboedro é: ${volume.toFixed(2)}`;
+            }
+        
+    </script>
+</body>
+</html>

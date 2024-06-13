@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="circulo.css">
+    <t</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"> <h1>Cubo</h1></a>
+    </header>
+
+    <main>
+        <form>
+            <label for="Calculo">
+                <input type="number" id="cubo" name="cubo" placeholder="Digite o valor">
+            </label>
+
+            <input type="submit" value="Calcular" id="btn">
+        </form>
+
+        <div class="res">
+            <h2 id="res"></h2>
+        </div>
+    </main>
+
+    <script>
+         
+       
+          var botao = document.querySelector("#btn")
+          
+          function calculo(event){
+            event.preventDefault()
+
+              var r = document.querySelector("#cubo").value
+              var resposta = document.querySelector("#res")
+           
+              resposta.innerHTML = `resultado  ${r *r *r}`
+        }
+
+        botao.addEventListener("click", calculo)
+
+
+        
+    </script>
+</body>
+</html>
